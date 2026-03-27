@@ -45,10 +45,15 @@
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         {{ $todo->title }}
 
-                        <form action="/todos/{{ $todo->id }}" method="POST" class="m-0">
-                            @csrf
-                            @method('DELETE') <button type="submit" class="btn btn-danger btn-sm">ลบ</button>
-                        </form>
+                        <div class="d-flex gap-2">
+                            <a href="/todos/{{ $todo->id }}/edit" class="btn btn-warning btn-sm">แก้ไข</a>
+
+                            <form action="/todos/{{ $todo->id }}" method="POST" class="m-0">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">ลบ</button>
+                            </form>
+                        </div>
                     </li>
                     @empty
                     <div class="text-center text-muted py-3">

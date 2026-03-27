@@ -26,11 +26,34 @@ class TodoController extends Controller
         ]);
         return back()->with('success', 'เพิ่มงานเรียบร้อย');
     }
+
     public function destroy(Todo $todo)
     {
         if ($todo->user_id == Auth::id()) {
             $todo->delete();
         }
         return back()->with('success', 'ลบงานเรียบร้อย');
+    }
+
+    public function edit(Todo $todo)
+    {
+        if ($todo->user_id != Auth::id()) {
+            abort(403, 'คุณไม่มีสิทธิ์แก้ไข');
+        }
+        return view('edit', compact('todo'));
+    }
+
+    public function update(Request $request, Todo $todo)
+    {
+        if ($todo->user_id != Auth::id()) {
+            abort(403);
+        }
+        $request->validate([
+            'title' => 'required|max:255'
+        ]);
+        $todo->update([
+            'title' => $request->title
+        ]);
+        return redirect('/')->with('success', 'อัปเดตงานเรียบร้อย');
     }
 }

@@ -8,6 +8,9 @@ Route::get('/', [TodoController::class, 'index'])->middleware('auth');
 Route::post('/todos', [TodoController::class, 'store'])->middleware('auth');
 Route::delete('/todos/{todo}', [TodoController::class, 'destroy'])->middleware('auth');
 
+Route::get('/todos/{todo}/edit', [TodoController::class, 'edit'])->middleware('auth');
+Route::put('/todos/{todo}', [TodoController::class, 'update'])->middleware('auth');
+
 Route::get('/register', function () {
     return view('register');
 })->middleware('guest');
