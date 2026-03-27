@@ -30,7 +30,7 @@
 
         <div class="card shadow-sm border-0">
             <div class="card-body py-4">
-                <h4 class="text-dark mb-4 text-center">รายการที่ต้องทำ 📝</h4>
+                <h4 class="text-dark mb-4 text-center">รายการที่ต้องทำ</h4>
 
                 <form action="/todos" method="POST" class="mb-4">
                     @csrf

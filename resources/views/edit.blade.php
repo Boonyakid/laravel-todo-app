@@ -12,7 +12,7 @@
     <div class="container mt-5" style="max-width: 500px;">
         <div class="card shadow-sm border-0">
             <div class="card-body p-4">
-                <h4 class="text-dark mb-4 text-center">แก้ไขรายการที่ต้องทำ ✏️</h4>
+                <h4 class="text-dark mb-4 text-center">แก้ไขรายการที่ต้องทำ</h4>
 
                 <form action="/todos/{{ $todo->id }}" method="POST">
                     @csrf
