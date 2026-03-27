@@ -43,8 +43,9 @@
                 <ul class="list-group text-start">
                     @forelse($todos as $todo)
                     <li class="list-group-item d-flex justify-content-between align-items-center">
-                        {{ $todo->title }}
-
+                        <span class="text-break me-3">
+                            {{ $todo->title }}
+                        </span>
                         <div class="d-flex gap-2">
                             <a href="/todos/{{ $todo->id }}/edit" class="btn btn-warning btn-sm">แก้ไข</a>
 
