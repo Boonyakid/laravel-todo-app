@@ -1,34 +1,36 @@
 # Laravel Todo App
 
-โปรเจกต์ระบบจัดการงาน (Todo Application) ที่พัฒนาด้วย **Laravel** และมีการเขียน Automated Test ควบคุมคุณภาพของโค้ดด้วย **Pest**
+A Todo application developed with **Laravel**, featuring automated testing to ensure code quality using **Pest**.
 
-## ฟีเจอร์หลัก (Features)
-- **ระบบสมาชิก (Authentication):** สมัครสมาชิก, เข้าสู่ระบบ และออกจากระบบ
-- **ระบบจัดการงาน (CRUD):** เพิ่ม, อ่าน, แก้ไข และลบงาน
-- **ความปลอดภัย (Authorization):** ผู้ใช้แต่ละคนจะมองเห็นและจัดการได้เฉพาะงานของตัวเองเท่านั้น
-- **Automated Testing:** มีการเขียนเทสต์ครอบคลุมระบบทั้งหมดด้วย Pest
+## Features
+- **Authentication:** User registration, login, and logout.
+- **Task Management (CRUD):** Create, read, update, and delete tasks.
+- **Authorization:** Users can only view and manage their own specific tasks.
+- **Automated Testing:** Comprehensive test coverage for the entire system using Pest.
 
-## เทคโนโลยีที่ใช้ (Tech Stack)
+## Tech Stack
 - **Framework:** Laravel 13.2.0
 - **Language:** PHP 8.4.19
 - **Database:** MySQL
 - **Testing:** Pest
 
-## ติดตั้งแพ็กเกจที่จำเป็น
-- composer install
-- npm install
+## Install required packages
+```bash
+composer install
+npm install
 
-## ตั้งค่า Environment และฐานข้อมูล MySQL
-- cp .env.example .env
+## Configure Environment and MySQL Database
+```bash
+cp .env.example .env
 
-## สร้าง Master Key ประจำโปรเจกต์
+## Generate Application Key
 - php artisan key:generate
 
-## สร้างตารางในฐานข้อมูล (Migration)
+## Run Database Migrations
 - php artisan migrate
 
-## คอมไพล์ไฟล์ Frontend
+## Compile Frontend Assets
 - npm run build
 
-## การรัน Test (Testing)
+## Testing
 - php artisan test
