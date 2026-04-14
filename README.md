@@ -14,23 +14,22 @@ A Todo application developed with **Laravel**, featuring automated testing to en
 - **Database:** MySQL
 - **Testing:** Pest
 
-## Install required packages
+### 1. Install required packages
 ```bash
 composer install
 npm install
-
-## Configure Environment and MySQL Database
-```bash
+2. Configure Environment and MySQL Database
+Bash
 cp .env.example .env
-
-## Generate Application Key
-- php artisan key:generate
-
-## Run Database Migrations
-- php artisan migrate
-
-## Compile Frontend Assets
-- npm run build
-
-## Testing
-- php artisan test
+3. Generate Application Key
+Bash
+php artisan key:generate
+4. Run Database Migrations
+Bash
+php artisan migrate
+5. Compile Frontend Assets
+Bash
+npm run build
+6. Testing
+Bash
+php artisan test
